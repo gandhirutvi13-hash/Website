@@ -4,7 +4,9 @@
 <base href="/">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+<script src="/vendor/react.production.min.js"></script>
+<script src="/vendor/react-dom.production.min.js"></script>
+<script src="/support.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3CLP6GLVNE"></script>
 </head>
 <body>
@@ -27,7 +29,7 @@
   "@graph": [
     {
       "@type": "MedicalTherapy",
-      "@id": "https://physiobyrutvi.in/condition#back-neck-service",
+      "@id": "https://physiobyrutvi.in/condition/#back-neck-service",
       "name": "Back and Neck Pain Physiotherapy at Home",
       "description": "Doctor-led home physiotherapy for back and neck pain by Dr Rutvi Gandhi, PT, MPT.",
       "serviceType": "Home physiotherapy",
@@ -46,7 +48,7 @@
     },
     {
       "@type": "FAQPage",
-      "@id": "https://physiobyrutvi.in/condition#back-neck-faq",
+      "@id": "https://physiobyrutvi.in/condition/#back-neck-faq",
       "mainEntity": [
         {"@type": "Question", "name": "Can physiotherapy help this at home?", "acceptedAnswer": {"@type": "Answer", "text": "In many cases, yes. A structured plan of assessment, hands-on care and home exercises can be highly effective."}},
         {"@type": "Question", "name": "How many sessions will I need?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the condition and your goals. Dr Rutvi gives an honest estimate after the first assessment."}},
@@ -55,11 +57,11 @@
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://physiobyrutvi.in/condition#breadcrumb",
+      "@id": "https://physiobyrutvi.in/condition/#breadcrumb",
       "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://physiobyrutvi.in/"},
         {"@type": "ListItem", "position": 2, "name": "Conditions", "item": "https://physiobyrutvi.in/conditions"},
-        {"@type": "ListItem", "position": 3, "name": "Back and Neck Pain", "item": "https://physiobyrutvi.in/condition#back-neck"}
+        {"@type": "ListItem", "position": 3, "name": "Back and Neck Pain", "item": "https://physiobyrutvi.in/condition/#back-neck"}
       ]
     }
   ]
@@ -87,7 +89,7 @@
     <div data-reveal style="display:flex;align-items:center;gap:10px;font-size:12.5px;color:#717470;margin-bottom:clamp(24px,3vw,40px);flex-wrap:wrap;">
       <a href="/" style="text-decoration:none;color:#717470;">Home</a>
       <span style="color:#CFE3D8;">/</span>
-      <a href="/conditions" style="text-decoration:none;color:#717470;">Conditions</a>
+      <a href="/conditions/" style="text-decoration:none;color:#717470;">Conditions</a>
       <span style="color:#CFE3D8;">/</span>
       <span id="cdCrumb" style="color:#0E4F52;font-weight:600;">Back &amp; Neck Pain</span>
     </div>
@@ -107,7 +109,7 @@
 
       <div data-reveal data-delay="120" style="position:relative;">
         <div style="position:absolute;top:-8%;right:-6%;width:64%;pointer-events:none;opacity:.6;z-index:1;"><svg viewBox="0 0 400 240" fill="none" width="100%"><path d="M10 220 C 120 30, 280 30, 390 220" stroke="#EE7B5B" stroke-width="2.5" stroke-linecap="round"/></svg></div>
-        <img id="cdLead" src="assets/img/cond-1.webp" alt="Physiotherapist supporting neck and upper-back assessment at home" loading="eager" decoding="async" style="width:100%;height:clamp(300px,42vw,520px);object-fit:cover;border-radius:24px;position:relative;z-index:2;box-shadow:0 18px 44px rgba(14,79,82,.12);">
+        <img id="cdLead" src="/assets/img/cond-1.webp" alt="Physiotherapist supporting neck and upper-back assessment at home" loading="eager" decoding="async" style="width:100%;height:clamp(300px,42vw,520px);object-fit:cover;border-radius:24px;position:relative;z-index:2;box-shadow:0 18px 44px rgba(14,79,82,.12);">
       </div>
     </div>
   </div>
@@ -158,9 +160,9 @@
   <div style="max-width:1120px;margin:0 auto;">
     <div data-reveal style="font-size:11.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#717470;margin-bottom:16px;">Related concerns</div>
     <div id="cdRelated" data-reveal data-delay="60" style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:clamp(40px,5vw,64px);">
-      <a href="/condition#posture" style="text-decoration:none;background:#fff;border:1px solid rgba(27,32,33,.08);color:#0E4F52;font-weight:600;font-size:14px;padding:11px 18px;border-radius:100px;transition:background .3s,color .3s;" style-hover="background:#0E4F52;color:#FDF8F5;">Posture Correction →</a>
-      <a href="/condition#sciatica" style="text-decoration:none;background:#fff;border:1px solid rgba(27,32,33,.08);color:#0E4F52;font-weight:600;font-size:14px;padding:11px 18px;border-radius:100px;transition:background .3s,color .3s;" style-hover="background:#0E4F52;color:#FDF8F5;">Sciatica →</a>
-      <a href="/condition#frozen-shoulder" style="text-decoration:none;background:#fff;border:1px solid rgba(27,32,33,.08);color:#0E4F52;font-weight:600;font-size:14px;padding:11px 18px;border-radius:100px;transition:background .3s,color .3s;" style-hover="background:#0E4F52;color:#FDF8F5;">Frozen Shoulder →</a>
+      <a href="/condition/#posture" style="text-decoration:none;background:#fff;border:1px solid rgba(27,32,33,.08);color:#0E4F52;font-weight:600;font-size:14px;padding:11px 18px;border-radius:100px;transition:background .3s,color .3s;" style-hover="background:#0E4F52;color:#FDF8F5;">Posture Correction →</a>
+      <a href="/condition/#sciatica" style="text-decoration:none;background:#fff;border:1px solid rgba(27,32,33,.08);color:#0E4F52;font-weight:600;font-size:14px;padding:11px 18px;border-radius:100px;transition:background .3s,color .3s;" style-hover="background:#0E4F52;color:#FDF8F5;">Sciatica →</a>
+      <a href="/condition/#frozen-shoulder" style="text-decoration:none;background:#fff;border:1px solid rgba(27,32,33,.08);color:#0E4F52;font-weight:600;font-size:14px;padding:11px 18px;border-radius:100px;transition:background .3s,color .3s;" style-hover="background:#0E4F52;color:#FDF8F5;">Frozen Shoulder →</a>
     </div>
 
     <div data-reveal style="position:relative;background:#EE7B5B;border-radius:28px;overflow:hidden;padding:clamp(36px,5vw,64px);text-align:center;">
@@ -275,17 +277,17 @@ class Component extends DCLogic {
       '@graph':[
         {
           '@type':'MedicalTherapy',
-          '@id':'https://physiobyrutvi.in/condition#' + knownSlug + '-service',
+          '@id':'https://physiobyrutvi.in/condition/#' + knownSlug + '-service',
           name:name + ' Physiotherapy at Home',
           description:d.intro,
           serviceType:'Home physiotherapy',
           provider:{ '@id':'https://physiobyrutvi.in/#business' },
           areaServed:areas,
-          url:'https://physiobyrutvi.in/condition#' + knownSlug
+          url:'https://physiobyrutvi.in/condition/#' + knownSlug
         },
         {
           '@type':'FAQPage',
-          '@id':'https://physiobyrutvi.in/condition#' + knownSlug + '-faq',
+          '@id':'https://physiobyrutvi.in/condition/#' + knownSlug + '-faq',
           mainEntity:(d.faq || []).map((x) => ({
             '@type':'Question',
             name:x.q,
@@ -294,11 +296,11 @@ class Component extends DCLogic {
         },
         {
           '@type':'BreadcrumbList',
-          '@id':'https://physiobyrutvi.in/condition#breadcrumb',
+          '@id':'https://physiobyrutvi.in/condition/#breadcrumb',
           itemListElement:[
             { '@type':'ListItem', position:1, name:'Home', item:'https://physiobyrutvi.in/' },
             { '@type':'ListItem', position:2, name:'Conditions', item:'https://physiobyrutvi.in/conditions' },
-            { '@type':'ListItem', position:3, name:name, item:'https://physiobyrutvi.in/condition#' + knownSlug }
+            { '@type':'ListItem', position:3, name:name, item:'https://physiobyrutvi.in/condition/#' + knownSlug }
           ]
         }
       ]
@@ -324,7 +326,7 @@ class Component extends DCLogic {
     const wa = this.waLink(slug);
     document.querySelectorAll('[data-cdwa]').forEach((a) => a.setAttribute('href', wa));
     const lead = document.getElementById('cdLead');
-    if (lead) { lead.setAttribute('src', 'assets/img/' + (this.IMG[slug] || 'cond-1') + '.webp'); lead.setAttribute('alt', this.ALT[slug] || 'Home physiotherapy session'); }
+    if (lead) { lead.setAttribute('src', '/assets/img/' + (this.IMG[slug] || 'cond-1') + '.webp'); lead.setAttribute('alt', this.ALT[slug] || 'Home physiotherapy session'); }
     try {
       const pageTitle = (this.NAMES[slug] || 'Condition') + ' Physiotherapy at Home - Mumbai | PhysioByRutvi';
       document.title = pageTitle;
@@ -352,7 +354,7 @@ class Component extends DCLogic {
     if (faq) faq.innerHTML = d.faq.map((x) => '<details style="padding:20px 0;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:\'Fraunces\',serif;font-weight:600;font-size:clamp(18px,2.2vw,22px);color:#1B2021;">'+this.esc(x.q)+'<span class="cd-plus" style="flex:0 0 auto;color:#EE7B5B;font-size:24px;transition:transform .3s;">+</span></summary><p style="color:#4A4F4C;font-size:15.5px;line-height:1.65;margin-top:14px;max-width:60ch;">'+this.esc(x.a)+'</p></details>').join('');
 
     const rel = document.getElementById('cdRelated');
-    if (rel) rel.innerHTML = (d.related||[]).map((s) => '<a href="/condition#'+s+'" style="text-decoration:none;background:#fff;border:1px solid rgba(27,32,33,.08);color:#0E4F52;font-weight:600;font-size:14px;padding:11px 18px;border-radius:100px;transition:background .3s,color .3s;" onmouseover="this.style.background=\'#0E4F52\';this.style.color=\'#FDF8F5\'" onmouseout="this.style.background=\'#fff\';this.style.color=\'#0E4F52\'">'+this.esc(this.NAMES[s])+' \u2192</a>').join('');
+    if (rel) rel.innerHTML = (d.related||[]).map((s) => '<a href="/condition/#'+s+'" style="text-decoration:none;background:#fff;border:1px solid rgba(27,32,33,.08);color:#0E4F52;font-weight:600;font-size:14px;padding:11px 18px;border-radius:100px;transition:background .3s,color .3s;" onmouseover="this.style.background=\'#0E4F52\';this.style.color=\'#FDF8F5\'" onmouseout="this.style.background=\'#fff\';this.style.color=\'#0E4F52\'">'+this.esc(this.NAMES[s])+' \u2192</a>').join('');
   }
 
   initReveal(){
@@ -366,7 +368,7 @@ class Component extends DCLogic {
   renderVals(){ return {}; }
 }
 </script>
-<script src="./site-analytics.js"></script>
-<script src="./voice-widget-loader.js"></script>
+<script src="/site-analytics.js"></script>
+<script src="/voice-widget-loader.js"></script>
 </body>
 </html>

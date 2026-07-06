@@ -3,7 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+<script src="/vendor/react.production.min.js"></script>
+<script src="/vendor/react-dom.production.min.js"></script>
+<script src="/support.js"></script>
 </head>
 <body>
 <x-dc>
@@ -20,7 +22,7 @@
   <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;max-width:1320px;margin:0 auto;padding:13px clamp(16px,4.5vw,52px);">
 
     <a href="/" aria-label="PhysioByRutvi home" style="display:flex;align-items:center;gap:10px;text-decoration:none;flex:0 1 auto;min-width:0;">
-      <img src="assets/pbr-logo-mark.png" alt="" loading="eager" style="width:44px;height:44px;border-radius:12px;object-fit:contain;background:#FDF8F5;padding:3px;box-shadow:0 1px 0 rgba(27,32,33,.06);flex:0 0 auto;">
+      <img src="/assets/pbr-logo-mark.png" alt="" loading="eager" style="width:44px;height:44px;border-radius:12px;object-fit:contain;background:#FDF8F5;padding:3px;box-shadow:0 1px 0 rgba(27,32,33,.06);flex:0 0 auto;">
       <span style="display:flex;flex-direction:column;justify-content:center;line-height:1;min-width:0;">
         <span style="font-family:'Fraunces',serif;font-weight:700;font-size:19px;letter-spacing:.24em;color:#0E4F52;">PHYSIO</span>
         <span style="font-family:'Inter',sans-serif;font-weight:800;font-size:8px;letter-spacing:.32em;color:#EE7B5B;margin-top:5px;">BY RUTVI</span>
@@ -52,7 +54,7 @@
   <div style="position:relative;min-height:100%;display:flex;flex-direction:column;max-width:1320px;margin:0 auto;padding:clamp(18px,4vw,40px) clamp(20px,5vw,52px) clamp(28px,5vw,48px);">
     <div style="display:flex;align-items:center;justify-content:space-between;">
       <div style="display:flex;align-items:center;gap:11px;">
-        <img src="assets/pbr-logo-mark.png" alt="" loading="eager" style="width:40px;height:40px;border-radius:11px;object-fit:cover;background:#FDF8F5;flex:0 0 auto;">
+        <img src="/assets/pbr-logo-mark.png" alt="" loading="eager" style="width:40px;height:40px;border-radius:11px;object-fit:cover;background:#FDF8F5;flex:0 0 auto;">
         <div style="font-family:'Fraunces',serif;font-weight:600;font-size:16px;letter-spacing:.15em;color:#FDF8F5;">PHYSIO <span style="color:#EE7B5B;font-size:9px;letter-spacing:.26em;">BY RUTVI</span></div>
       </div>
       <button onClick="{{ closeMenu }}" aria-label="Close menu" style="width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(246,242,236,.28);background:transparent;color:#FDF8F5;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .3s,transform .4s;" style-hover="background:rgba(246,242,236,.12);transform:rotate(90deg);">
@@ -66,7 +68,7 @@
           <span style="font-size:12px;font-weight:600;color:#EE7B5B;letter-spacing:.1em;">01</span>
           <span style="font-family:'Fraunces',serif;font-weight:500;font-size:clamp(29px,6vw,50px);line-height:1;color:#FDF8F5;text-transform:uppercase;letter-spacing:-.01em;">Physiotherapy</span>
         </a>
-        <a href="/conditions" onClick="{{ closeMenu }}" style="display:flex;align-items:baseline;gap:16px;text-decoration:none;padding:clamp(6px,1.3vw,10px) 0;border-bottom:1px solid rgba(246,242,236,.1);transition:padding-left .35s cubic-bezier(.2,.7,.2,1);" style-hover="padding-left:14px;">
+        <a href="/conditions/" onClick="{{ closeMenu }}" style="display:flex;align-items:baseline;gap:16px;text-decoration:none;padding:clamp(6px,1.3vw,10px) 0;border-bottom:1px solid rgba(246,242,236,.1);transition:padding-left .35s cubic-bezier(.2,.7,.2,1);" style-hover="padding-left:14px;">
           <span style="font-size:12px;font-weight:600;color:#EE7B5B;letter-spacing:.1em;">02</span>
           <span style="font-family:'Fraunces',serif;font-weight:500;font-size:clamp(29px,6vw,50px);line-height:1;color:#FDF8F5;text-transform:uppercase;letter-spacing:-.01em;">Conditions</span>
         </a>
@@ -74,7 +76,7 @@
           <span style="font-size:12px;font-weight:600;color:#EE7B5B;letter-spacing:.1em;">03</span>
           <span style="font-family:'Fraunces',serif;font-weight:500;font-size:clamp(29px,6vw,50px);line-height:1;color:#FDF8F5;text-transform:uppercase;letter-spacing:-.01em;">How It Works</span>
         </a>
-        <a href="/about" onClick="{{ closeMenu }}" style="display:flex;align-items:baseline;gap:16px;text-decoration:none;padding:clamp(6px,1.3vw,10px) 0;border-bottom:1px solid rgba(246,242,236,.1);transition:padding-left .35s cubic-bezier(.2,.7,.2,1);" style-hover="padding-left:14px;">
+        <a href="/about/" onClick="{{ closeMenu }}" style="display:flex;align-items:baseline;gap:16px;text-decoration:none;padding:clamp(6px,1.3vw,10px) 0;border-bottom:1px solid rgba(246,242,236,.1);transition:padding-left .35s cubic-bezier(.2,.7,.2,1);" style-hover="padding-left:14px;">
           <span style="font-size:12px;font-weight:600;color:#EE7B5B;letter-spacing:.1em;">04</span>
           <span style="font-family:'Fraunces',serif;font-weight:500;font-size:clamp(29px,6vw,50px);line-height:1;color:#FDF8F5;text-transform:uppercase;letter-spacing:-.01em;">About Dr Rutvi</span>
         </a>
