@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0E4F52">
+<title>FAQs | Home Physiotherapy | PhysioByRutvi</title>
+<meta name="description" content="Common questions about home physiotherapy visits, pricing, durations and equipment.">
+<link rel="canonical" href="https://physiobyrutvi.in/faqs/">
+<meta property="og:title" content="FAQs | Home Physiotherapy | PhysioByRutvi">
+<meta property="og:description" content="Common questions about home physiotherapy visits, pricing, durations and equipment.">
+<meta property="og:url" content="https://physiobyrutvi.in/faqs/">
+<meta property="og:image" content="https://physiobyrutvi.in/assets/social-share.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/mobile-responsive-enhancements.css" media="screen">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<script defer src="/vendor/react.production.min.js"></script>
+<script defer src="/vendor/react-dom.production.min.js"></script>
+<script defer src="/support.min.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>FAQs | Home Physiotherapy | PhysioByRutvi</title>
+<meta name="description" content="Common questions about home physiotherapy visits, pricing, durations and equipment.">
+</helmet>
+
+<dc-import name="Header" hint-size="100%,66px"></dc-import>
+
+<main style="background:#FDF8F5; min-height:100vh;">
+  
+      <section style="padding:clamp(64px,8vw,120px) clamp(20px,5vw,52px); max-width:800px; margin:0 auto;">
+        <div data-reveal style="margin-bottom:24px; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:#0E4F52; font-size:12px;">FAQS</div>
+        <h1 data-reveal style="font-family:'Fraunces',serif; font-size:clamp(36px,5vw,64px); color:#0E4F52; line-height:1.1; margin-bottom:64px;">Common Questions</h1>
+        
+        <div data-reveal style="margin-bottom:40px; padding-bottom:40px; border-bottom:1px solid rgba(14,79,82,0.1);">
+          <h3 style="font-family:'Fraunces',serif; font-size:24px; color:#0E4F52; margin:0 0 16px;">How long is a session?</h3>
+          <p style="font-size:17px; color:#4A4F4C; line-height:1.6; margin:0;">Initial assessments take between 45 and 60 minutes. Follow-up treatment sessions are typically 45 minutes, depending on the complexity of the condition.</p>
+        </div>
+        
+        <div data-reveal style="margin-bottom:40px; padding-bottom:40px; border-bottom:1px solid rgba(14,79,82,0.1);">
+          <h3 style="font-family:'Fraunces',serif; font-size:24px; color:#0E4F52; margin:0 0 16px;">Do you bring equipment?</h3>
+          <p style="font-size:17px; color:#4A4F4C; line-height:1.6; margin:0;">Yes. We carry basic assessment tools, resistance bands, kinesiology tape, and portable electrotherapy devices (like TENS/IFT) if required. We also creatively use your home environment (chairs, stairs, beds) for functional rehabilitation.</p>
+        </div>
+        
+        <div data-reveal style="margin-bottom:40px; padding-bottom:40px; border-bottom:1px solid rgba(14,79,82,0.1);">
+          <h3 style="font-family:'Fraunces',serif; font-size:24px; color:#0E4F52; margin:0 0 16px;">What are your charges?</h3>
+          <p style="font-size:17px; color:#4A4F4C; line-height:1.6; margin:0;">Pricing depends on the exact location and the nature of the required care. Please message us on WhatsApp with your suburb and concern for accurate pricing.</p>
+        </div>
+        
+        <div data-reveal style="margin-bottom:40px; padding-bottom:40px; border-bottom:1px solid rgba(14,79,82,0.1);">
+          <h3 style="font-family:'Fraunces',serif; font-size:24px; color:#0E4F52; margin:0 0 16px;">Can I request a female physiotherapist?</h3>
+          <p style="font-size:17px; color:#4A4F4C; line-height:1.6; margin:0;">Yes, our team includes both male and female physiotherapists. You may request a preference when booking your initial assessment.</p>
+        </div>
+        
+        <div data-reveal>
+          <a href="https://wa.me/918879475065" target="_blank" style="display:inline-block; background:#EE7B5B; color:#1B2021; padding:16px 32px; border-radius:100px; font-weight:600; text-decoration:none; font-size:16px;">Ask Another Question</a>
+        </div>
+      </section>
+    
+</main>
+
+<dc-import name="Footer"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount(){
+    const reveals = document.querySelectorAll('[data-reveal]');
+    const ob = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.style.opacity=1;
+          e.target.style.transform='translateY(0)';
+          ob.unobserve(e.target);
+        }
+      });
+    },{threshold:0.1});
+    reveals.forEach(el=>{
+      el.style.opacity=0;
+      el.style.transform='translateY(20px)';
+      el.style.transition='opacity 0.6s ease-out, transform 0.6s ease-out';
+      if(el.getAttribute('data-delay')) el.style.transitionDelay = el.getAttribute('data-delay')+'ms';
+      ob.observe(el);
+    });
+  }
+}
+</script>
+</body>
+</html>

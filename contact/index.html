@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0E4F52">
+<title>Contact | Book Home Physiotherapy | PhysioByRutvi</title>
+<meta name="description" content="Book a home physiotherapy visit in Mumbai. Contact Dr Rutvi Gandhi on WhatsApp or phone to discuss your symptoms and availability.">
+<link rel="canonical" href="https://physiobyrutvi.in/contact/">
+<meta property="og:title" content="Contact | Book Home Physiotherapy | PhysioByRutvi">
+<meta property="og:description" content="Book a home physiotherapy visit in Mumbai. Contact Dr Rutvi Gandhi on WhatsApp or phone to discuss your symptoms and availability.">
+<meta property="og:url" content="https://physiobyrutvi.in/contact/">
+<meta property="og:image" content="https://physiobyrutvi.in/assets/social-share.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/mobile-responsive-enhancements.css" media="screen">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<script defer src="/vendor/react.production.min.js"></script>
+<script defer src="/vendor/react-dom.production.min.js"></script>
+<script defer src="/support.min.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Contact | Book Home Physiotherapy | PhysioByRutvi</title>
+<meta name="description" content="Book a home physiotherapy visit in Mumbai. Contact Dr Rutvi Gandhi on WhatsApp or phone to discuss your symptoms and availability.">
+</helmet>
+
+<dc-import name="Header" hint-size="100%,66px"></dc-import>
+
+<main style="background:#FDF8F5; min-height:100vh;">
+  
+      <section style="padding:clamp(64px,8vw,120px) clamp(20px,5vw,52px); max-width:1220px; margin:0 auto; text-align:center;">
+        <div data-reveal style="margin-bottom:24px; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:#0E4F52; font-size:12px;">CONTACT</div>
+        <h1 data-reveal style="font-family:'Fraunces',serif; font-size:clamp(36px,5vw,64px); color:#0E4F52; line-height:1.1; margin-bottom:24px;">Get in touch.</h1>
+        <p data-reveal style="font-size:clamp(18px,2vw,22px); color:#4A4F4C; max-width:70ch; margin:0 auto 64px; line-height:1.6;">WhatsApp is the fastest way to reach us. Share your symptoms, suburb and preferred time, and Dr Rutvi will reply to coordinate your care.</p>
+        
+        <div data-reveal style="display:flex; flex-direction:column; gap:24px; max-width:400px; margin:0 auto;">
+          <a href="https://wa.me/918879475065" target="_blank" style="display:flex; align-items:center; justify-content:center; gap:12px; background:#0F7A40; color:#fff; padding:20px; border-radius:16px; font-weight:600; text-decoration:none; font-size:18px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.12c-.24.68-1.4 1.3-1.94 1.38-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.37-.14-.19-1.18-1.57-1.18-2.99s.75-2.12 1.01-2.41c.26-.29.57-.36.76-.36.19 0 .38.002.55.01.18.008.41-.067.64.49.24.57.81 1.98.88 2.12.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.87-1.09.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.88.28.14.46.21.53.33.07.12.07.68-.17 1.36z"/></svg>
+            Message on WhatsApp
+          </a>
+          
+          <a href="tel:+918879475065" style="display:block; padding:20px; background:#fff; border:1px solid rgba(14,79,82,0.1); border-radius:16px; color:#0E4F52; font-weight:600; text-decoration:none; font-size:18px;">
+            Call +91 88794 75065
+          </a>
+          
+          <a href="mailto:support@physiobyrutvi.in" style="display:block; padding:20px; background:#fff; border:1px solid rgba(14,79,82,0.1); border-radius:16px; color:#0E4F52; font-weight:600; text-decoration:none; font-size:18px;">
+            support@physiobyrutvi.in
+          </a>
+        </div>
+      </section>
+    
+</main>
+
+<dc-import name="Footer"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount(){
+    const reveals = document.querySelectorAll('[data-reveal]');
+    const ob = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.style.opacity=1;
+          e.target.style.transform='translateY(0)';
+          ob.unobserve(e.target);
+        }
+      });
+    },{threshold:0.1});
+    reveals.forEach(el=>{
+      el.style.opacity=0;
+      el.style.transform='translateY(20px)';
+      el.style.transition='opacity 0.6s ease-out, transform 0.6s ease-out';
+      if(el.getAttribute('data-delay')) el.style.transitionDelay = el.getAttribute('data-delay')+'ms';
+      ob.observe(el);
+    });
+  }
+}
+</script>
+</body>
+</html>

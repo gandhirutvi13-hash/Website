@@ -35,8 +35,8 @@
 
     <nav id="pbrLangSwitch" aria-label="Language" style="display:flex;align-items:center;gap:4px;margin-left:auto;margin-right:clamp(4px,1vw,10px);padding:4px;border:1px solid rgba(14,79,82,.13);border-radius:100px;background:rgba(253,248,245,.72);">
       <a data-pbr-lang-option="en" href="{{ langEnHref }}" style="text-decoration:none;color:#0E4F52;font-size:11px;font-weight:800;letter-spacing:.08em;padding:7px 9px;border-radius:100px;">EN</a>
-      <a data-pbr-lang-option="mr" href="{{ langMrHref }}" style="text-decoration:none;color:#0E4F52;font-size:11px;font-weight:800;letter-spacing:.02em;padding:7px 9px;border-radius:100px;">मराठी</a>
-      <a data-pbr-lang-option="gu" href="{{ langGuHref }}" style="text-decoration:none;color:#0E4F52;font-size:11px;font-weight:800;letter-spacing:.02em;padding:7px 9px;border-radius:100px;">ગુજરાતી</a>
+      <a data-pbr-lang-option="mr" href="{{ langMrHref }}" style="text-decoration:none;color:#0E4F52;font-size:11px;font-weight:800;letter-spacing:.02em;padding:7px 9px;border-radius:100px;">à¤®à¤°à¤¾à¤ à¥€</a>
+      <a data-pbr-lang-option="gu" href="{{ langGuHref }}" style="text-decoration:none;color:#0E4F52;font-size:11px;font-weight:800;letter-spacing:.02em;padding:7px 9px;border-radius:100px;">àª—à«àªœàª°àª¾àª¤à«€</a>
     </nav>
 
     <div style="display:flex;align-items:center;gap:clamp(8px,1.6vw,12px);flex:0 0 auto;">
@@ -73,34 +73,35 @@
     </div>
 
     <nav style="margin:auto 0;padding:clamp(24px,5vw,40px) 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,4vw,60px);align-items:center;">
-      <div style="display:flex;flex-direction:column;gap:2px;">
-        <a href="/#approach" onClick="{{ closeMenu }}" style="display:flex;align-items:baseline;gap:16px;text-decoration:none;padding:clamp(6px,1.3vw,10px) 0;border-bottom:1px solid rgba(246,242,236,.1);transition:padding-left .35s cubic-bezier(.2,.7,.2,1);" style-hover="padding-left:14px;">
-          <span style="font-size:12px;font-weight:600;color:#EE7B5B;letter-spacing:.1em;">01</span>
-          <span style="font-family:'Fraunces',serif;font-weight:500;font-size:clamp(29px,6vw,50px);line-height:1;color:#FDF8F5;text-transform:uppercase;letter-spacing:-.01em;">Physiotherapy</span>
-        </a>
-        <a href="/conditions/" onClick="{{ closeMenu }}" style="display:flex;align-items:baseline;gap:16px;text-decoration:none;padding:clamp(6px,1.3vw,10px) 0;border-bottom:1px solid rgba(246,242,236,.1);transition:padding-left .35s cubic-bezier(.2,.7,.2,1);" style-hover="padding-left:14px;">
-          <span style="font-size:12px;font-weight:600;color:#EE7B5B;letter-spacing:.1em;">02</span>
-          <span style="font-family:'Fraunces',serif;font-weight:500;font-size:clamp(29px,6vw,50px);line-height:1;color:#FDF8F5;text-transform:uppercase;letter-spacing:-.01em;">Conditions</span>
-        </a>
-        <a href="/#how" onClick="{{ closeMenu }}" style="display:flex;align-items:baseline;gap:16px;text-decoration:none;padding:clamp(6px,1.3vw,10px) 0;border-bottom:1px solid rgba(246,242,236,.1);transition:padding-left .35s cubic-bezier(.2,.7,.2,1);" style-hover="padding-left:14px;">
-          <span style="font-size:12px;font-weight:600;color:#EE7B5B;letter-spacing:.1em;">03</span>
-          <span style="font-family:'Fraunces',serif;font-weight:500;font-size:clamp(29px,6vw,50px);line-height:1;color:#FDF8F5;text-transform:uppercase;letter-spacing:-.01em;">How It Works</span>
-        </a>
-        <a href="/about/" onClick="{{ closeMenu }}" style="display:flex;align-items:baseline;gap:16px;text-decoration:none;padding:clamp(6px,1.3vw,10px) 0;border-bottom:1px solid rgba(246,242,236,.1);transition:padding-left .35s cubic-bezier(.2,.7,.2,1);" style-hover="padding-left:14px;">
-          <span style="font-size:12px;font-weight:600;color:#EE7B5B;letter-spacing:.1em;">04</span>
-          <span style="font-family:'Fraunces',serif;font-weight:500;font-size:clamp(29px,6vw,50px);line-height:1;color:#FDF8F5;text-transform:uppercase;letter-spacing:-.01em;">About Dr Rutvi</span>
-        </a>
-        <a href="/#reviews" onClick="{{ closeMenu }}" style="display:flex;align-items:baseline;gap:16px;text-decoration:none;padding:clamp(6px,1.3vw,10px) 0;border-bottom:1px solid rgba(246,242,236,.1);transition:padding-left .35s cubic-bezier(.2,.7,.2,1);" style-hover="padding-left:14px;">
-          <span style="font-size:12px;font-weight:600;color:#EE7B5B;letter-spacing:.1em;">05</span>
-          <span style="font-family:'Fraunces',serif;font-weight:500;font-size:clamp(29px,6vw,50px);line-height:1;color:#FDF8F5;text-transform:uppercase;letter-spacing:-.01em;">Reviews</span>
-        </a>
-      </div>
+        <nav style="display:flex;flex-direction:column;margin-bottom:28px;">
+          <a href="/" onClick="{{ closeMenu }}" style="display:flex;align-items:baseline;gap:16px;text-decoration:none;padding:clamp(6px,1.3vw,10px) 0;border-bottom:1px solid rgba(246,242,236,.1);transition:padding-left .35s cubic-bezier(.2,.7,.2,1);" style-hover="padding-left:14px;">
+            <span style="font-size:11px;font-weight:700;letter-spacing:.14em;color:#EE7B5B;">01</span> <span style="font-family:'Fraunces',serif;font-size:clamp(22px,3.5vw,28px);font-weight:500;color:#FDF8F5;line-height:1.1;">Home</span>
+          </a>
+          <a href="/conditions/" onClick="{{ closeMenu }}" style="display:flex;align-items:baseline;gap:16px;text-decoration:none;padding:clamp(6px,1.3vw,10px) 0;border-bottom:1px solid rgba(246,242,236,.1);transition:padding-left .35s cubic-bezier(.2,.7,.2,1);" style-hover="padding-left:14px;">
+            <span style="font-size:11px;font-weight:700;letter-spacing:.14em;color:#EE7B5B;">02</span> <span style="font-family:'Fraunces',serif;font-size:clamp(22px,3.5vw,28px);font-weight:500;color:#FDF8F5;line-height:1.1;">Conditions</span>
+          </a>
+          <a href="/how-care-works/" onClick="{{ closeMenu }}" style="display:flex;align-items:baseline;gap:16px;text-decoration:none;padding:clamp(6px,1.3vw,10px) 0;border-bottom:1px solid rgba(246,242,236,.1);transition:padding-left .35s cubic-bezier(.2,.7,.2,1);" style-hover="padding-left:14px;">
+            <span style="font-size:11px;font-weight:700;letter-spacing:.14em;color:#EE7B5B;">03</span> <span style="font-family:'Fraunces',serif;font-size:clamp(22px,3.5vw,28px);font-weight:500;color:#FDF8F5;line-height:1.1;">How Care Works</span>
+          </a>
+          <a href="/our-physiotherapists/" onClick="{{ closeMenu }}" style="display:flex;align-items:baseline;gap:16px;text-decoration:none;padding:clamp(6px,1.3vw,10px) 0;border-bottom:1px solid rgba(246,242,236,.1);transition:padding-left .35s cubic-bezier(.2,.7,.2,1);" style-hover="padding-left:14px;">
+            <span style="font-size:11px;font-weight:700;letter-spacing:.14em;color:#EE7B5B;">04</span> <span style="font-family:'Fraunces',serif;font-size:clamp(22px,3.5vw,28px);font-weight:500;color:#FDF8F5;line-height:1.1;">Our Team</span>
+          </a>
+          <a href="/about/" onClick="{{ closeMenu }}" style="display:flex;align-items:baseline;gap:16px;text-decoration:none;padding:clamp(6px,1.3vw,10px) 0;border-bottom:1px solid rgba(246,242,236,.1);transition:padding-left .35s cubic-bezier(.2,.7,.2,1);" style-hover="padding-left:14px;">
+            <span style="font-size:11px;font-weight:700;letter-spacing:.14em;color:#EE7B5B;">05</span> <span style="font-family:'Fraunces',serif;font-size:clamp(22px,3.5vw,28px);font-weight:500;color:#FDF8F5;line-height:1.1;">About Dr Rutvi</span>
+          </a>
+          <a href="/service-areas/" onClick="{{ closeMenu }}" style="display:flex;align-items:baseline;gap:16px;text-decoration:none;padding:clamp(6px,1.3vw,10px) 0;border-bottom:1px solid rgba(246,242,236,.1);transition:padding-left .35s cubic-bezier(.2,.7,.2,1);" style-hover="padding-left:14px;">
+            <span style="font-size:11px;font-weight:700;letter-spacing:.14em;color:#EE7B5B;">06</span> <span style="font-family:'Fraunces',serif;font-size:clamp(22px,3.5vw,28px);font-weight:500;color:#FDF8F5;line-height:1.1;">Service Areas</span>
+          </a>
+          <a href="/faqs/" onClick="{{ closeMenu }}" style="display:flex;align-items:baseline;gap:16px;text-decoration:none;padding:clamp(6px,1.3vw,10px) 0;border-bottom:1px solid rgba(246,242,236,.1);transition:padding-left .35s cubic-bezier(.2,.7,.2,1);" style-hover="padding-left:14px;">
+            <span style="font-size:11px;font-weight:700;letter-spacing:.14em;color:#EE7B5B;">07</span> <span style="font-family:'Fraunces',serif;font-size:clamp(22px,3.5vw,28px);font-weight:500;color:#FDF8F5;line-height:1.1;">FAQs</span>
+          </a>
+        </nav>
 
       <div style="background:rgba(253,248,245,.06);border:1px solid rgba(246,242,236,.14);border-radius:24px;padding:clamp(22px,3vw,32px);">
         <div id="pbrLangSwitchMenu" aria-label="Language" style="display:none;align-items:center;gap:6px;margin-bottom:20px;padding:5px;border:1px solid rgba(246,242,236,.16);border-radius:100px;background:rgba(253,248,245,.06);">
           <a data-pbr-lang-option="en" href="{{ langEnHref }}" style="flex:1;text-align:center;text-decoration:none;color:#FDF8F5;font-size:12px;font-weight:800;letter-spacing:.08em;padding:9px 10px;border-radius:100px;">EN</a>
-          <a data-pbr-lang-option="mr" href="{{ langMrHref }}" style="flex:1;text-align:center;text-decoration:none;color:#FDF8F5;font-size:12px;font-weight:800;padding:9px 10px;border-radius:100px;">मराठी</a>
-          <a data-pbr-lang-option="gu" href="{{ langGuHref }}" style="flex:1;text-align:center;text-decoration:none;color:#FDF8F5;font-size:12px;font-weight:800;padding:9px 10px;border-radius:100px;">ગુજરાતી</a>
+          <a data-pbr-lang-option="mr" href="{{ langMrHref }}" style="flex:1;text-align:center;text-decoration:none;color:#FDF8F5;font-size:12px;font-weight:800;padding:9px 10px;border-radius:100px;">à¤®à¤°à¤¾à¤ à¥€</a>
+          <a data-pbr-lang-option="gu" href="{{ langGuHref }}" style="flex:1;text-align:center;text-decoration:none;color:#FDF8F5;font-size:12px;font-weight:800;padding:9px 10px;border-radius:100px;">àª—à«àªœàª°àª¾àª¤à«€</a>
         </div>
         <div style="font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#CFE3D8;margin-bottom:14px;">Book a home visit</div>
         <p style="font-family:'Fraunces',serif;font-weight:400;font-size:clamp(20px,2.4vw,25px);line-height:1.28;color:#FDF8F5;margin:0 0 20px;">Share what feels difficult, your suburb, and a preferred time.</p>
@@ -109,12 +110,12 @@
           Message Dr Rutvi
         </a>
         <a href="tel:+918879475065" style="display:flex;align-items:center;justify-content:center;gap:8px;background:transparent;border:1.5px solid rgba(246,242,236,.28);color:#FDF8F5;text-decoration:none;font-weight:600;font-size:15px;padding:14px;border-radius:100px;">Call +91 88794 75065</a>
-        <div style="display:flex;align-items:center;gap:8px;margin-top:18px;color:rgba(246,242,236,.7);font-size:12.5px;"><span style="color:#EE7B5B;">★★★★★</span> 5.0 · MPT · Home visits by appointment</div>
+        <div style="display:flex;align-items:center;gap:8px;margin-top:18px;color:rgba(246,242,236,.7);font-size:12.5px;"><span style="color:#EE7B5B;">â˜…â˜…â˜…â˜…â˜…</span> 5.0 Â· MPT Â· Home visits by appointment</div>
       </div>
     </nav>
 
     <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;padding-top:20px;border-top:1px solid rgba(246,242,236,.12);color:rgba(246,242,236,.62);font-size:12.5px;">
-      <span>Serving Bhayander to Andheri · Home visits by appointment</span>
+      <span>Serving Bhayander to Andheri Â· Home visits by appointment</span>
       <span style="color:#EE7B5B;font-family:'Fraunces',serif;font-style:italic;">Movement, restored personally.</span>
     </div>
   </div>
@@ -212,3 +213,4 @@ class Component extends DCLogic {
 </script>
 </body>
 </html>
+
