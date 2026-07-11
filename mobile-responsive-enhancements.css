@@ -1,76 +1,181 @@
-/* Mobile & Responsive Design Enhancements for PhysioByRutvi */
+/* =========================================================================
+   GOD TIER MOBILE RESPONSIVE SYSTEM
+   Premium aesthetics, proper spacing, touch ergonomics, and fluid scaling.
+   ========================================================================= */
 
+/* ===== CORE FLUID VARIABLES & RESETS ===== */
 :root {
-  --touch-target-min: 44px;
+  --touch-target-min: 52px; /* Apple Human Interface Guideline recommended + buffer */
+  --safe-area-h: max(20px, env(safe-area-inset-left), env(safe-area-inset-right));
+  --safe-area-v: max(20px, env(safe-area-inset-top), env(safe-area-inset-bottom));
+  --premium-radius: 24px;
 }
 
-@media (max-width: 480px) {
-  body { font-size: 14px; }
-  p { font-size: 14.5px; line-height: 1.6; }
-  
-  /* Touch-friendly interactive elements */
-  a, button, [role="button"] {
-    min-height: var(--touch-target-min);
-    min-width: var(--touch-target-min);
-  }
-  
-  /* Responsive images */
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-@media (hover: none) and (pointer: coarse) {
-  /* Increase touch targets */
-  a, button, input, select, textarea {
-    min-height: 48px;
-    min-width: 48px;
-  }
-  
-  /* Disable text selection on interactive elements */
-  a, button, [role="button"] {
-    user-select: none;
-    -webkit-user-select: none;
-  }
-  
-  /* Better scrolling */
-  .pbrScroll, [style*="scroll"] {
-    -webkit-overflow-scrolling: touch;
-  }
-}
-
-/* ===== STICKY HEADER MOBILE SUPPORT ===== */
-@media (max-width: 720px) {
-  header, [role="banner"] {
-    position: sticky !important;
-    top: 0 !important;
-    z-index: 1000 !important;
-    background: #FDF8F5; /* Ensure it isn't transparent */
-    box-shadow: 0 4px 16px rgba(14, 79, 82, 0.08) !important;
-  }
-}
-
-/* ===== MOBILE CTA OPTIMIZATION ===== */
-@media (max-width: 720px) {
-  /* Fix for iOS font size zoom */
-  input, select, textarea {
-    font-size: 16px !important;
-  }
-}
-
-/* ===== RETINA DISPLAY OPTIMIZATION ===== */
-@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  img {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    image-rendering: -webkit-optimize-contrast;
-  }
-}
-
-/* Safari text rendering */
-html {
-  -webkit-text-size-adjust: 100%;
+html, body {
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== TABLET & MEDIUM SCREENS (721px - 1024px) ===== */
+@media (max-width: 1024px) {
+  section, header {
+    padding-left: clamp(24px, 4vw, 40px) !important;
+    padding-right: clamp(24px, 4vw, 40px) !important;
+  }
+}
+
+/* ===== MOBILE PREMIUM DESIGN (max-width: 720px) ===== */
+@media (max-width: 720px) {
+  
+  /* --- TYPOGRAPHY & RHYTHM --- */
+  body {
+    font-size: 15px; /* Bump base font size for readability */
+    line-height: 1.6;
+    padding-bottom: calc(90px + env(safe-area-inset-bottom)) !important; /* Make room for floating CTA */
+  }
+
+  h1, h2, h3 {
+    line-height: 1.15 !important;
+    letter-spacing: -0.015em !important;
+  }
+  
+  h1 { font-size: clamp(36px, 10vw, 46px) !important; }
+  h2 { font-size: clamp(28px, 8vw, 36px) !important; }
+
+  p {
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+    color: #3b403c !important; /* Slightly higher contrast for mobile */
+  }
+
+  /* --- SPACING & SAFE AREAS --- */
+  section {
+    padding-left: var(--safe-area-h) !important;
+    padding-right: var(--safe-area-h) !important;
+    padding-top: clamp(48px, 8vh, 72px) !important;
+    padding-bottom: clamp(48px, 8vh, 72px) !important;
+  }
+
+  /* Ensure containers have breathing room */
+  .mobile-gap-fix {
+    gap: 16px !important;
+  }
+
+  /* --- PREMIUM HERO ADAPTATION --- */
+  /* Instead of chopping the carousel, we allow the hero to scale natively but enhance its presentation */
+  #hero {
+    height: 100dvh !important; /* Use dynamic viewport height to fix browser URL bar jumps */
+    max-height: none !important;
+    border-radius: 0 0 32px 32px !important;
+    margin-bottom: 24px;
+    box-shadow: 0 12px 40px rgba(14, 79, 82, 0.08);
+  }
+  
+  #heroVp {
+    height: 100% !important;
+  }
+  
+  /* Add a vertical gradient for mobile readability (image is background, text is bottom) */
+  #heroTrack > div::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(253,248,245, 0) 20%, rgba(253,248,245, 0.75) 55%, rgba(253,248,245, 0.98) 90%);
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  /* The inline text container for the hero */
+  #heroTrack > div > div:nth-child(5) {
+    padding-top: 0 !important;
+    padding-bottom: calc(48px + env(safe-area-inset-bottom)) !important;
+    justify-content: flex-end !important;
+    z-index: 2 !important;
+  }
+
+  /* Force Hero buttons to stack neatly on small screens */
+  #heroTrack .mobile-center {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+  #heroTrack .mobile-center > a {
+    width: 100%;
+    justify-content: center;
+  }
+  /* The stars and rating label below buttons */
+  #heroTrack .mobile-center:last-child {
+    flex-direction: row !important;
+    align-items: center !important;
+  }
+
+  /* --- GLASSMORPHISM & HEADERS --- */
+  header, [role="banner"] {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: rgba(253, 248, 245, 0.88) !important;
+    backdrop-filter: blur(24px) saturate(1.8) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(1.8) !important;
+    border-bottom: 1px solid rgba(14, 79, 82, 0.05) !important;
+    box-shadow: 0 4px 24px rgba(14, 79, 82, 0.06) !important;
+  }
+
+  /* --- FLOATING CTA (Bottom Bar) --- */
+  #pbrMobileCta {
+    background: rgba(253, 248, 245, 0.92) !important;
+    backdrop-filter: blur(20px) saturate(1.5) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(1.5) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.4) !important;
+    box-shadow: 0 -12px 40px rgba(14, 79, 82, 0.12) !important;
+    padding-bottom: calc(16px + env(safe-area-inset-bottom)) !important;
+    padding-top: 16px !important;
+  }
+
+  /* --- TACTILE CARDS & COMPONENTS --- */
+  a[href*="/conditions/"][style*="box-shadow"], 
+  a[href*="#how"][style*="box-shadow"],
+  a[href*="#reviews"][style*="box-shadow"] {
+    border-radius: var(--premium-radius) !important;
+    box-shadow: 0 8px 30px rgba(14, 79, 82, 0.07) !important;
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s !important;
+  }
+  
+  a[href*="/conditions/"][style*="box-shadow"]:active, 
+  a[href*="#how"][style*="box-shadow"]:active,
+  a[href*="#reviews"][style*="box-shadow"]:active {
+    transform: scale(0.97) !important;
+    box-shadow: 0 4px 15px rgba(14, 79, 82, 0.04) !important;
+  }
+
+  /* The 4-metric grid (MPT, 5.0, 9+, 100%) */
+  div[style*="grid-template-columns:repeat(auto-fit,minmax(140px,1fr))"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 32px 16px !important;
+    background: #fff;
+    padding: 32px 24px !important;
+    border-radius: 28px;
+    box-shadow: 0 12px 36px rgba(14, 79, 82, 0.06);
+    margin-top: 40px !important;
+    border-top: none !important;
+  }
+
+  /* --- TOUCH ERGONOMICS --- */
+  a, button, [role="button"] {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  a[style*="background"], button[style*="background"] {
+    min-height: var(--touch-target-min) !important;
+  }
+}
+
+/* ===== ENHANCED MICRO-ANIMATIONS ===== */
+@media (hover: hover) and (pointer: fine) {
+  /* Only apply hover scales on desktop to avoid "sticky hover" on mobile */
+  a[style*="box-shadow"]:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
 }

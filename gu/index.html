@@ -312,67 +312,6 @@
   }
   #heroTrack::-webkit-scrollbar,.pbrScroll::-webkit-scrollbar{display:none;}
 
-  /* ===== MOBILE HERO (≤720px) ===== */
-  @media (max-width:720px){
-    body{padding-bottom:112px;}
-
-    /* Hero viewport: collapse carousel to single static view */
-    #hero{height:auto!important;min-height:0!important;max-height:none!important;}
-    #heroVp{height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;cursor:auto!important;touch-action:auto!important;background:#FDF8F5!important;}
-    #heroTrack{display:block!important;height:auto!important;width:100%!important;transform:none!important;transition:none!important;will-change:auto!important;}
-
-    /* Hide slides 2 & 3 */
-    #heroTrack>div{display:none!important;}
-    
-    /* Slide 1 becomes the mobile hero container */
-    #heroTrack>div:first-child{display:flex!important;flex-direction:column!important;position:relative!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;background:#FDF8F5!important;padding:0!important;}
-
-    /* Hero image: standard inline block at top */
-    #heroTrack>div:first-child>img{
-      position:relative!important;display:block!important;inset:auto!important;
-      width:calc(100% - 32px)!important;height:50vh!important;min-height:300px!important;max-height:450px!important;
-      object-fit:cover!important;object-position:66% 30%!important;
-      border-radius:20px!important;
-      margin:16px auto 24px!important;opacity:1!important;filter:none!important;order:1!important;
-    }
-
-    /* Hide gradient overlays & parallax SVG */
-    #heroTrack>div:first-child>div:nth-of-type(1),
-    #heroTrack>div:first-child>div:nth-of-type(2),
-    #heroTrack>div:first-child>div:nth-of-type(3){display:none!important;}
-
-    /* Content block: inline block below image */
-    #heroTrack>div:first-child>div:nth-of-type(4){
-      position:relative!important;z-index:2!important;
-      height:auto!important;min-height:0!important;
-      display:block!important;
-      padding:12px 24px 48px!important;
-      background:transparent!important;
-      margin:0!important;
-      order:2!important;
-      box-shadow:none!important;
-    }
-    #heroTrack>div:first-child>div:nth-of-type(4)>div{max-width:100%!important;}
-
-    /* Typography fixes */
-    #heroVp h1{font-size:clamp(34px,9vw,42px)!important;line-height:1.05!important;letter-spacing:-.02em!important;text-align:left!important;}
-    #heroVp p{font-size:16px!important;line-height:1.5!important;max-width:100%!important;margin-top:16px!important;text-align:left!important;}
-    #heroVp [data-parallax]{display:none!important;}
-    #heroDots{display:none!important;}
-
-    #heroVp .mobile-center{text-align:left!important;justify-content:flex-start!important;}
-
-    /* Section spacing */
-    #approach,#how,#reviews,#answers{scroll-margin-top:74px!important;}
-    .pbrScroll{scroll-snap-type:x proximity!important;padding-bottom:26px!important;scroll-padding-left:20px;}
-  }
-
-  /* ===== SMALL MOBILE (≤420px) ===== */
-  @media (max-width:420px){
-    #heroTrack>div:first-child>img{height:45vh!important;min-height:260px!important;}
-    #heroVp h1{font-size:clamp(30px,8.5vw,36px)!important;}
-  }
-
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
 </style>
 </helmet>
@@ -902,5 +841,6 @@ class Component extends DCLogic {
 <script defer src="/site-i18n.min.js"></script>
 </body>
 </html>
+
 
 
