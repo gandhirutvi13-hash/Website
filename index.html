@@ -34,11 +34,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="/assets/img/hero-1.webp" type="image/webp" fetchpriority="high">
 <link rel="stylesheet" href="/mobile-responsive-enhancements.css" media="screen">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
-<link rel="apple-touch-icon" href="/assets/favicon-192.png">
 <script defer src="/vendor/react.production.min.js"></script>
 <script defer src="/vendor/react-dom.production.min.js"></script>
 <script defer src="/support.min.js"></script>
@@ -313,9 +308,18 @@
         <p data-reveal data-delay="60" style="font-family:'Fraunces',serif;font-weight:400;font-size:clamp(24px,3.4vw,40px);line-height:1.22;letter-spacing:-.01em;color:#1B2021;text-wrap:balance;">Care that begins by <span style="color:#0E4F52;">understanding how you move.</span></p>
         <p data-reveal data-delay="120" style="font-family:'Inter',sans-serif;font-size:clamp(16px,1.8vw,18px);line-height:1.6;color:#4A4F4C;max-width:52ch;margin-top:20px;">Pain is rarely just one body part. It changes how you sit, sleep, climb stairs, exercise, work, and move around your home. Dr Rutvi first understands that full picture, then builds treatment around what your body needs and what your day allows.</p>
         <div data-reveal data-delay="160" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;">
-          <span style="display:inline-flex;align-items:center;gap:7px;background:#CFE3D8;color:#0E4F52;font-size:13px;font-weight:600;padding:10px 16px;border-radius:100px;"><span style="color:#EE7B5B;">&#9733;</span> Assessment first</span>
-          <span style="background:#CFE3D8;color:#0E4F52;font-size:13px;font-weight:600;padding:10px 16px;border-radius:100px;">Hands-on and movement-led</span>
-          <span style="background:#CFE3D8;color:#0E4F52;font-size:13px;font-weight:600;padding:10px 16px;border-radius:100px;">Plan you can repeat</span>
+          <span style="display:inline-flex;align-items:center;gap:7px;background:#CFE3D8;color:#0E4F52;font-size:13px;font-weight:600;padding:10px 16px;border-radius:100px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#EE7B5B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Assessment first
+          </span>
+          <span style="display:inline-flex;align-items:center;gap:7px;background:#CFE3D8;color:#0E4F52;font-size:13px;font-weight:600;padding:10px 16px;border-radius:100px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#EE7B5B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Hands-on and movement-led
+          </span>
+          <span style="display:inline-flex;align-items:center;gap:7px;background:#CFE3D8;color:#0E4F52;font-size:13px;font-weight:600;padding:10px 16px;border-radius:100px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#EE7B5B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Plan you can repeat
+          </span>
         </div>
       </div>
 
@@ -326,6 +330,7 @@
           <div style="position:absolute;left:18px;bottom:18px;display:inline-flex;align-items:center;gap:8px;background:rgba(253,248,245,.92);backdrop-filter:blur(6px);color:#0E4F52;font-size:12px;font-weight:600;padding:9px 14px;border-radius:100px;"><span style="width:7px;height:7px;border-radius:50%;background:#EE7B5B;"></span>Your real movement, seen at home</div>
         </div>
       </div>
+
     </div>
 
     <div data-reveal data-delay="120" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:clamp(16px,3vw,32px);margin-top:clamp(44px,5vw,68px);padding-top:clamp(32px,4vw,48px);border-top:1px solid rgba(27,32,33,.1);">
@@ -338,8 +343,27 @@
 </section>
 
 <!-- ===================== TEASER TILES ===================== -->
+<style>
+  #homeBento {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(12px, 1.6vw, 20px);
+  }
+  @media(min-width: 768px) {
+    #homeBento {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media(min-width: 1024px) {
+    #homeBento {
+      grid-template-columns: 1.2fr 1fr 1fr;
+    }
+    #homeBento > a:nth-child(1) { grid-column: 1 / 2; grid-row: 1 / 3; }
+    #homeBento > a:nth-child(4) { grid-column: 2 / 4; grid-row: 2 / 3; }
+  }
+</style>
 <section style="background:#F6F2EC;padding:0 clamp(12px,3vw,40px) clamp(12px,3vw,40px);">
-  <div style="max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:clamp(12px,1.6vw,20px);">
+  <div id="homeBento" style="max-width:1320px;margin:0 auto;">
 
     <a href="/conditions/" data-reveal aria-label="Conditions" style="position:relative;display:block;text-decoration:none;min-height:clamp(340px,42vw,480px);border-radius:26px;overflow:hidden;box-shadow:0 8px 24px rgba(14,79,82,.06);transition:box-shadow .5s,transform .5s cubic-bezier(.2,.7,.2,1);" style-hover="box-shadow:0 22px 50px rgba(14,79,82,.16);transform:translateY(-4px);">
       <img src="/assets/img/home-2.webp" alt="Physiotherapist guiding an assisted shoulder movement during a home assessment" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%;transition:transform .7s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.05);">
@@ -737,5 +761,6 @@ class Component extends DCLogic {
 <script defer src="/site-i18n.min.js"></script>
 </body>
 </html>
+
 
 
