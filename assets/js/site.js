@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const viewport = document.getElementById('heroVp');
   const dots = [0, 1, 2].map(index => document.getElementById(`hDot${index}`)).filter(Boolean);
   if (track && viewport && dots.length) {
+    const mobileHero = matchMedia('(max-width: 620px)').matches;
     let current = 0;
     let timer;
     let startX = 0;
@@ -92,24 +93,26 @@ document.addEventListener('DOMContentLoaded', () => {
         dot.setAttribute('aria-current', i === current ? 'true' : 'false');
       });
     };
-    const play = () => { if (!reduce) timer = setInterval(() => go(current + 1), 6500); };
+    const play = () => { if (!reduce && !mobileHero) timer = setInterval(() => go(current + 1), 6500); };
     const pause = () => clearInterval(timer);
-    dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => { pause(); go(index); play(); });
-      dot.addEventListener('keydown', event => {
-        if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); dot.click(); }
+    if (!mobileHero) {
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => { pause(); go(index); play(); });
+        dot.addEventListener('keydown', event => {
+          if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); dot.click(); }
+        });
       });
-    });
-    viewport.addEventListener('pointerdown', event => { startX = event.clientX; pause(); });
-    viewport.addEventListener('pointerup', event => {
-      const delta = event.clientX - startX;
-      if (Math.abs(delta) > 55) go(current + (delta < 0 ? 1 : -1));
-      play();
-    });
-    viewport.addEventListener('mouseenter', pause);
-    viewport.addEventListener('mouseleave', play);
-    viewport.addEventListener('focusin', pause);
-    viewport.addEventListener('focusout', play);
+      viewport.addEventListener('pointerdown', event => { startX = event.clientX; pause(); });
+      viewport.addEventListener('pointerup', event => {
+        const delta = event.clientX - startX;
+        if (Math.abs(delta) > 55) go(current + (delta < 0 ? 1 : -1));
+        play();
+      });
+      viewport.addEventListener('mouseenter', pause);
+      viewport.addEventListener('mouseleave', play);
+      viewport.addEventListener('focusin', pause);
+      viewport.addEventListener('focusout', play);
+    }
     go(0);
     play();
   }
