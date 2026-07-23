@@ -160,9 +160,19 @@ if (!/function trackLead[\s\S]*loadGtag\(\)/.test(analytics)) fail('Lead clicks 
 
 const allGeneratedFiles = [...pages.map(page => page.file), ...requiredRoutes];
 const developerCredit = 'Developed by <a href="https://github.com/ApeLabsNFT" target="_blank" rel="noopener noreferrer">ApeLabs</a>';
+const whatsappDummyPattern = /___|My name is|suburb is\s*_+|preferred day\/time is\s*_+/i;
 for (const file of allGeneratedFiles) {
   const html = fs.readFileSync(path.join(ROOT, file), 'utf8');
   if (!html.includes(developerCredit)) fail(`${file} is missing the linked ApeLabs developer credit`);
+  const whatsappLinks = [...html.matchAll(/href="(https:\/\/wa\.me\/[^"]+)"/g)].map(match => match[1].replace(/&amp;/g, '&'));
+  if (!whatsappLinks.length) fail(`${file} has no WhatsApp enquiry link`);
+  for (const link of whatsappLinks) {
+    let message = '';
+    try { message = new URL(link).searchParams.get('text') || ''; }
+    catch (error) { fail(`${file} has an invalid WhatsApp URL: ${error.message}`); }
+    if (!message) fail(`${file} has a WhatsApp link without a ready-to-send message`);
+    if (whatsappDummyPattern.test(message)) fail(`${file} has a WhatsApp message containing dummy blanks: ${message}`);
+  }
   const links = [...html.matchAll(/href="(\/[^"]*)"/g)].map(match => match[1]);
   for (const link of links) {
     const pathname = link.split('#')[0].split('?')[0];
@@ -171,6 +181,11 @@ for (const file of allGeneratedFiles) {
     const target = pathname.endsWith('/') ? `${pathname.slice(1)}index.html` : pathname.slice(1);
     if (!fs.existsSync(path.join(ROOT, target))) fail(`${file} links to missing internal route: ${pathname}`);
   }
+}
+
+for (const file of ['build_static.js', 'site-i18n.js', 'site-i18n.min.js', 'Home.dc.html', 'Home.dc (1).html', 'MobileCTA.dc.html']) {
+  const content = fs.readFileSync(path.join(ROOT, file), 'utf8');
+  if (whatsappDummyPattern.test(content)) fail(`${file} can reintroduce dummy WhatsApp placeholders`);
 }
 
 if (failed) process.exit(1);
